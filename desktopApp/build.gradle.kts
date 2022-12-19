@@ -7,8 +7,8 @@ plugins {
     id(KotlinDependencies.compose)
 }
 
-group = "io.matrix.walletc"
-version = "1.0-SNAPSHOT"
+group = "${KotlinDependencies.self}.desktop"
+version = Versions.walletc
 
 
 kotlin {
@@ -21,7 +21,7 @@ kotlin {
     sourceSets {
         val jvmMain by getting {
             dependencies {
-                implementation(project(":common"))
+                implementation(project(":shared"))
                 implementation(compose.desktop.currentOs)
             }
         }
@@ -31,11 +31,11 @@ kotlin {
 
 compose.desktop {
     application {
-        mainClass = "MainKt"
+        mainClass = "${KotlinDependencies.self}.desktop.MainKt"
         nativeDistributions {
             targetFormats(TargetFormat.Dmg, TargetFormat.Msi, TargetFormat.Deb, TargetFormat.Rpm)
-            packageName = "WalletC"
-            packageVersion = "1.0.0"
+            packageName = KotlinDependencies.selfReleaseName
+            packageVersion = Versions.walletcRelease
         }
     }
 }

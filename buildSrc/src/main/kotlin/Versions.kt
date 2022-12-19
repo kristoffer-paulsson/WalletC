@@ -14,6 +14,9 @@
  */
 
 object Versions {
+    const val walletc = "0.1.0-SNAPSHOT"
+    const val walletcRelease = "1.0.0"
+
     // Project Level Plugins
     const val kotlin = "1.7.10"
     const val comAndroid = "7.3.1"
@@ -24,6 +27,9 @@ object Versions {
     // Desktop Dependencies Version
 
     // Android Dependencies Version
+    const val androidCompileSdk = 32
+    const val androidMinSdk = 24
+    const val androidTargetSdk = androidCompileSdk
     const val androidxCore = "1.9.0"
     const val androidxAppcompat = "1.5.1"
     const val androidxCompose = "1.2.1"

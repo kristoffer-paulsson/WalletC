@@ -1,4 +1,4 @@
-package io.matrix.walletc.common
+package io.matrix.walletc.shared
 
 import androidx.compose.material.Text
 import androidx.compose.material.Button
@@ -11,10 +11,10 @@ import androidx.compose.runtime.setValue
 @Composable
 fun App() {
     var text by remember { mutableStateOf("Hello, World!") }
-    val platformName = getPlatformName()
+    val platformName = getPlatform()
 
     Button(onClick = {
-        text = "Hello, ${platformName}"
+        text = "Hello, ${platformName.name}"
     }) {
         Text(text)
     }

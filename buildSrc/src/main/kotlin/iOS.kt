@@ -12,3 +12,11 @@
  * Contributors:
  *      Kristoffer Paulsson - initial implementation
  */
+
+object iOS {
+    const val composeUi = "org.jetbrains.compose.ui:ui:${Versions.compose}"
+    const val composeUiTooling = "org.jetbrains.compose.ui:ui-tooling:${Versions.compose}"
+    const val composeUiPreview = "org.jetbrains.compose.ui:ui-tooling-preview:${Versions.compose}"
+    const val composeFoundation = "org.jetbrains.compose.foundation:foundation:${Versions.compose}"
+    const val composeMaterial = "org.jetbrains.compose.material:material:${Versions.compose}"
+}

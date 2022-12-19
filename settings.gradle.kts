@@ -17,4 +17,3 @@ rootProject.name = "WalletC"
 include(":desktopApp")
 include(":androidApp")
 include(":shared")
-include(":common")

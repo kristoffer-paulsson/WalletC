@@ -4,14 +4,14 @@ plugins {
 }
 
 android {
-    namespace = "io.matrix.walletc.android"
-    compileSdk = 32
+    namespace = "${KotlinDependencies.self}.android"
+    compileSdk = Versions.androidCompileSdk
     defaultConfig {
-        applicationId = "io.matrix.walletc.android"
-        minSdk = 27
-        targetSdk = 32
+        applicationId = "${KotlinDependencies.self}.android"
+        minSdk = Versions.androidMinSdk
+        targetSdk = Versions.androidTargetSdk
         versionCode = 1
-        versionName = "1.0"
+        versionName = Versions.walletcRelease
     }
     buildFeatures {
         compose = true

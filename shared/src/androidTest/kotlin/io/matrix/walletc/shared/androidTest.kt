@@ -1,4 +1,4 @@
-package io.matrix.walletc
+package io.matrix.walletc.shared
 
 import org.junit.Assert.assertTrue
 import org.junit.Test

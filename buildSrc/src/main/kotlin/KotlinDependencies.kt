@@ -14,10 +14,14 @@
  */
 
 object KotlinDependencies {
+    const val self = "io.matrix.walletc"
+    const val selfReleaseName = "WalletC Crypto"
     const val androidApplication = "com.android.application"
     const val androidLibrary = "com.android.library"
     const val compose = "org.jetbrains.compose"
 
     const val androidxCore = "androidx.core:core-ktx:${Versions.androidxCore}"
     const val androidxAppcompat = "androidx.appcompat:appcompat:${Versions.androidxAppcompat}"
+
+    const val composeUi = "org.jetbrains.compose.ui:ui-tooling-preview:${Versions.compose}"
 }

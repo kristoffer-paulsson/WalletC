@@ -1,4 +1,4 @@
-package io.matrix.walletc
+package io.matrix.walletc.shared
 
 import platform.UIKit.UIDevice
 

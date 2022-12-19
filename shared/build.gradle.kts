@@ -1,5 +1,6 @@
 plugins {
     kotlin("multiplatform")
+    id(KotlinDependencies.compose)
     id(KotlinDependencies.androidLibrary)
 }
 
@@ -16,14 +17,24 @@ kotlin {
         }
     }
 
+    jvm("desktop") {
+        compilations.all {
+            kotlinOptions.jvmTarget = "11"
+        }
+    }
+
     sourceSets {
-        val commonMain by getting
-        val commonTest by getting {
+        val commonMain by getting {
             dependencies {
-                implementation(kotlin("test"))
+                api(compose.runtime)
+                api(compose.foundation)
+                api(compose.material)
             }
         }
-        val androidMain by getting
+        val commonTest by getting
+        val androidMain by getting {
+            dependsOn(commonMain)
+        }
         val androidTest by getting
         val iosX64Main by getting
         val iosArm64Main by getting
@@ -43,14 +54,21 @@ kotlin {
             iosArm64Test.dependsOn(this)
             iosSimulatorArm64Test.dependsOn(this)
         }
+        val desktopMain by getting {
+            dependsOn(commonMain)
+            dependencies {
+                api(compose.preview)
+            }
+        }
+        val desktopTest by getting
     }
 }
 
 android {
-    namespace = "io.matrix.walletc"
-    compileSdk = 32
+    namespace = "${KotlinDependencies.self}.shared"
+    compileSdk = Versions.androidCompileSdk
     defaultConfig {
-        minSdk = 27
-        targetSdk = 32
+        minSdk = Versions.androidMinSdk
+        targetSdk = Versions.androidTargetSdk
     }
 }

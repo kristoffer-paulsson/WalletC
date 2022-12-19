@@ -1,6 +1,6 @@
 import SwiftUI
 
-@main
+@io.matrix.walletc.desktop.main
 struct iOSApp: App {
 	var body: some Scene {
 		WindowGroup {

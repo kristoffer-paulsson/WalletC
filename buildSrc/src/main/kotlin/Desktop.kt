@@ -12,3 +12,6 @@
  * Contributors:
  *      Kristoffer Paulsson - initial implementation
  */
+
+object Desktop {
+}
