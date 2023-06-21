@@ -27,8 +27,8 @@ object Versions {
     // Desktop Dependencies Version
 
     // Android Dependencies Version
-    const val androidCompileSdk = 32
-    const val androidMinSdk = 24
+    const val androidCompileSdk = 33
+    const val androidMinSdk = 27
     const val androidTargetSdk = androidCompileSdk
     const val androidxCore = "1.9.0"
     const val androidxAppcompat = "1.5.1"

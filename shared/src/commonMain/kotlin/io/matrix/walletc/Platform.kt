@@ -1,4 +1,4 @@
-package io.matrix.walletc.shared
+package io.matrix.walletc
 
 interface Platform {
     val name: String

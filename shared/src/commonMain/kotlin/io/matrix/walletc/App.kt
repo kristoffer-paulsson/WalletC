@@ -1,4 +1,4 @@
-package io.matrix.walletc.shared
+package io.matrix.walletc
 
 import androidx.compose.material.Text
 import androidx.compose.material.Button

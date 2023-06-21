@@ -29,11 +29,16 @@ kotlin {
                 api(compose.runtime)
                 api(compose.foundation)
                 api(compose.material)
+                implementation("com.yubico.yubikit:core:2.1.0")
             }
         }
         val commonTest by getting
         val androidMain by getting {
             dependsOn(commonMain)
+            dependencies {
+                implementation("com.yubico.yubikit:android:2.1.0")
+                implementation("com.yubico.yubikit:piv:2.1.0")
+            }
         }
         val androidTest by getting
         val iosX64Main by getting
@@ -58,6 +63,9 @@ kotlin {
             dependsOn(commonMain)
             dependencies {
                 api(compose.preview)
+                implementation("com.yubico.yubikit:android:2.1.0")
+                implementation("com.yubico.yubikit:management:2.1.0")
+                implementation("com.yubico.yubikit:piv:2.1.0")
             }
         }
         val desktopTest by getting
@@ -65,7 +73,7 @@ kotlin {
 }
 
 android {
-    namespace = "${KotlinDependencies.self}.shared"
+    namespace = "${KotlinDependencies.self}"
     compileSdk = Versions.androidCompileSdk
     defaultConfig {
         minSdk = Versions.androidMinSdk

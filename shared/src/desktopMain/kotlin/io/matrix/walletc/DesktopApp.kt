@@ -1,4 +1,4 @@
-package io.matrix.walletc.shared
+package io.matrix.walletc
 
 import androidx.compose.desktop.ui.tooling.preview.Preview
 import androidx.compose.runtime.Composable
